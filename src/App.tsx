@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Routehub from './routehub';
 import { BrowserRouter } from 'react-router-dom';
+import { registerMicroApps, start } from 'qiankun';
 
 function App() {
+  registerMicroApps([
+    {
+      name: 'hllmsub',
+      entry: '//localhost:6020',
+      container: '#MFContainer',
+      activeRule: '/app/react',
+    },
+  ]);
+
+  useEffect(() => {
+    start();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">

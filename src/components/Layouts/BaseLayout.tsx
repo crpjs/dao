@@ -22,9 +22,7 @@ function About() {
     <>
       <main>
         <h2>Who are we?</h2>
-        <p>
-          xxx
-        </p>
+        <p>xxx</p>
       </main>
       <nav>
         <Link to="/">Home</Link>
@@ -41,7 +39,6 @@ function getItem(
   children?: MenuItem[],
   type?: 'group',
 ): MenuItem {
-
   return {
     key,
     icon,
@@ -58,7 +55,10 @@ const items: MenuItem[] = [
   getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
     getItem('Option 9', '9'),
     getItem('Option 10', '10'),
-    getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
+    getItem('Submenu', 'sub3', null, [
+      getItem('Option 11', '11'),
+      getItem('Option 12', '12'),
+    ]),
   ]),
 ];
 
@@ -103,10 +103,13 @@ const App: React.FC = () => {
       </Sider>
       <Layout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0 }}>
-          {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-            className: 'trigger',
-            onClick: () => setCollapsed(!collapsed),
-          })}
+          {React.createElement(
+            collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+            {
+              className: 'trigger',
+              onClick: () => setCollapsed(!collapsed),
+            },
+          )}
         </Header>
         <Content
           className="site-layout-background"
@@ -116,6 +119,9 @@ const App: React.FC = () => {
             minHeight: 280,
           }}
         >
+          <div id="MFContainer" data-micromoculename="initGlobalState">
+            MFContainer
+          </div>
           {/* <Route path="sabout" element={<About />} /> */}
           <Outlet />
         </Content>
