@@ -4,6 +4,7 @@ import './App.css';
 import Routehub from './routehub';
 import { BrowserRouter } from 'react-router-dom';
 import { registerMicroApps, start } from 'qiankun';
+import MicroAppRegister from '@/app/MicroApp/register';
 
 function App() {
   registerMicroApps([
@@ -35,8 +36,8 @@ function App() {
           文档：敬请期待
         </a>
       </header>
-
       <Routehub />
+      <MicroAppRegister />
       {/* <Routehub /> */}
     </div>
   );

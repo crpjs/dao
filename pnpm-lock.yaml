@@ -4,7 +4,7 @@ specifiers:
   '@ant-design/icons': ^4.7.0
   '@commitlint/cli': ^17.2.0
   '@commitlint/config-conventional': ^17.2.0
-  '@crpjs/cli': ^0.0.4
+  '@crpjs/cli': 0.0.9
   '@reduxjs/toolkit': ^1.9.0
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^13.4.0
@@ -27,7 +27,7 @@ specifiers:
 
 dependencies:
   '@ant-design/icons': 4.7.0_biqbaboplfbrettd7655fr4n2y
-  '@crpjs/cli': 0.0.4_qlasdfebdclda4l7ev6ufe3ey4
+  '@crpjs/cli': 0.0.9_qlasdfebdclda4l7ev6ufe3ey4
   '@reduxjs/toolkit': 1.9.0_k4ae6lp43ej6mezo3ztvx6pykq
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
@@ -2087,10 +2087,10 @@ packages:
       validate-npm-package-name: 3.0.0
     dev: false
 
-  /@crpjs/cli-run/0.0.4_qlasdfebdclda4l7ev6ufe3ey4:
+  /@crpjs/cli-run/0.0.9_qlasdfebdclda4l7ev6ufe3ey4:
     resolution:
       {
-        integrity: sha512-IrWSqQNKVcFQ5eHWlITAS6tQSjQo8b8sBAX79YNE5tuQvNr+lInu5y20z2Ycx0Wj7pmvI7uWLBaIc5kd/9rzeQ==,
+        integrity: sha512-T6O3O/sffF9N7wxsGznkUY+8CjQpL1G9r1LWVoCNP8rjfE6J+5uSSnwMh/sG9qtJvsQfype7OT5yrl0r0oJ7Pw==,
       }
     dependencies:
       '@crpjs/dev-utils': 0.0.0
@@ -2189,15 +2189,15 @@ packages:
       - webpack-plugin-serve
     dev: false
 
-  /@crpjs/cli/0.0.4_qlasdfebdclda4l7ev6ufe3ey4:
+  /@crpjs/cli/0.0.9_qlasdfebdclda4l7ev6ufe3ey4:
     resolution:
       {
-        integrity: sha512-Aw+YT36cmaAhifyD6UPFSVzq0iRkDLjS2bHlxmjvyfjUS68xiCT4bWNgINdqOA8Jc255lMMBQMhZk6IsUDj+4Q==,
+        integrity: sha512-vc2wzqxqeDiYnNNYFm1Xb40CHD2W33HjN9TphWFr+n/BS+RKK5e1JtG7GsJ0ZS88Lio3ne+pbGBtffeRrX3s+Q==,
       }
     hasBin: true
     dependencies:
       '@crpjs/cli-create': 0.0.0
-      '@crpjs/cli-run': 0.0.4_qlasdfebdclda4l7ev6ufe3ey4
+      '@crpjs/cli-run': 0.0.9_qlasdfebdclda4l7ev6ufe3ey4
       '@crpjs/dev-utils': 0.0.0
       chalk: 4.1.2
       commander: 8.3.0
@@ -3521,7 +3521,7 @@ packages:
       }
     dependencies:
       '@types/eslint': 8.4.10
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
     dev: false
 
   /@types/eslint/8.4.10:

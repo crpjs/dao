@@ -49,8 +49,8 @@ function getItem(
 }
 const items: MenuItem[] = [
   getItem(<Link to="/app/home">home</Link>, 'home', <ContainerOutlined />),
-  getItem(<Link to="/app/seeds">seeds</Link>, 'seeds', <PieChartOutlined />),
-  getItem(<Link to="/app/about">about</Link>, 'about', <PieChartOutlined />),
+  getItem(<Link to="/app/rtree">rtree</Link>, 'rtree', <PieChartOutlined />),
+  getItem(<Link to="/app/vtree">vtree</Link>, 'vtree', <PieChartOutlined />),
 
   getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
     getItem('Option 9', '9'),
@@ -69,29 +69,6 @@ const App: React.FC = () => {
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo" />
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={['1']}
-          items={[
-            {
-              key: '1',
-              icon: <UserOutlined />,
-              label: 'nav 1',
-            },
-            {
-              key: '2',
-              icon: <VideoCameraOutlined />,
-              label: 'nav 2',
-            },
-            {
-              key: '3',
-              icon: <UploadOutlined />,
-              label: 'nav 3',
-            },
-          ]}
-        />
-
         <Menu
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}

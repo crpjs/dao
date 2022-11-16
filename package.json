@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
-    "@crpjs/cli": "^0.0.4",
+    "@crpjs/cli": "^0.0.9",
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -24,7 +24,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "crp run start -e prod -m start",
+    "dev": "crp run start -e test -m start",
     "start": "crp run start -e test -m start",
     "build:dev": "crp run -e dev -m build",
     "build:test": "crp run -e test -m build",
