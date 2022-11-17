@@ -20,21 +20,16 @@ function About() {
 function Routehub() {
   return (
     <>
-      <main>
-        <h2>前端基建生态</h2>
-        <p>SPA 脚手架</p>
-      </main>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
       <Routes>
         <Route path="/app" element={<BaseLayout />}>
           <Route path="messages" element={<About />} />
           <Route path="home" element={<Home />} />
-          <Route path="rtree" element={<Home />} />
-          <Route path="vtree" element={<Home />} />
+          {/* <Route path="rtree" element={<Home />} /> */}
+          <Route path="rtree" element={<Home />}>
+            <Route path="*" element={<Home />} />
+          </Route>
         </Route>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<BaseLayout />} />
       </Routes>
     </>
   );

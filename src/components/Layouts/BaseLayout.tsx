@@ -49,15 +49,55 @@ function getItem(
 }
 const items: MenuItem[] = [
   getItem(<Link to="/app/home">home</Link>, 'home', <ContainerOutlined />),
-  getItem(<Link to="/app/rtree">rtree</Link>, 'rtree', <PieChartOutlined />),
-  getItem(<Link to="/app/vtree">vtree</Link>, 'vtree', <PieChartOutlined />),
+  // getItem(<Link to="/app/vtree">vtree</Link>, 'vtree', <PieChartOutlined />),
 
-  getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
-    getItem('Option 9', '9'),
-    getItem('Option 10', '10'),
-    getItem('Submenu', 'sub3', null, [
-      getItem('Option 11', '11'),
-      getItem('Option 12', '12'),
+  getItem('RTree (react)', 'react', <AppstoreOutlined />, [
+    getItem(
+      <Link to="/app/rtree">RTree Home</Link>,
+      'rtree',
+      <PieChartOutlined />,
+    ),
+    getItem(
+      <Link to="/app/rtree/leaf">树叶</Link>,
+      'leaf',
+      <PieChartOutlined />,
+    ),
+    getItem('鳄梨树', 'sub3', null, [
+      getItem(
+        <Link to="/app/rtree/avocado">鳄梨</Link>,
+        'avocado',
+        <PieChartOutlined />,
+      ),
+      getItem(
+        <Link to="/app/rtree/tea">鳄梨奶茶</Link>,
+        'tea',
+        <PieChartOutlined />,
+      ),
+    ]),
+  ]),
+
+  getItem('VTree (vue)', 'vue', <AppstoreOutlined />, [
+    getItem(
+      <Link to="/app/vtree">VTree Home</Link>,
+      'vtree',
+      <PieChartOutlined />,
+    ),
+    getItem(
+      <Link to="/app/vtree/leaf">树叶</Link>,
+      'vtreeLeaf',
+      <PieChartOutlined />,
+    ),
+    getItem('鳄梨树', 'vue3', null, [
+      getItem(
+        <Link to="/app/vtree/avocado">鳄梨</Link>,
+        'vtreeAvocado',
+        <PieChartOutlined />,
+      ),
+      getItem(
+        <Link to="/app/vtree/tea">鳄梨奶茶</Link>,
+        'vtreetea',
+        <PieChartOutlined />,
+      ),
     ]),
   ]),
 ];
@@ -66,7 +106,13 @@ const App: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
-    <Layout>
+    <Layout
+      className="ant-layout-has-sider"
+      style={{
+        height: 'calc(100vh - 50px)',
+        overflowY: 'scroll',
+      }}
+    >
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo" />
         <Menu
