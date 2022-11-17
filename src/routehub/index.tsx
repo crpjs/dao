@@ -28,6 +28,9 @@ function Routehub() {
           <Route path="rtree" element={<Home />}>
             <Route path="*" element={<Home />} />
           </Route>
+          <Route path="vtree" element={<Home />}>
+            <Route path="*" element={<Home />} />
+          </Route>
         </Route>
         <Route path="/" element={<BaseLayout />} />
       </Routes>

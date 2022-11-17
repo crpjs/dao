@@ -16,7 +16,8 @@ import { Route, Outlet, Link } from 'react-router-dom';
 import { Layout, Menu, Button } from 'antd';
 import React, { useState } from 'react';
 import type { MenuProps } from 'antd';
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Content, Footer } = Layout;
+
 function About() {
   return (
     <>
@@ -148,6 +149,15 @@ const App: React.FC = () => {
           {/* <Route path="sabout" element={<About />} /> */}
           <Outlet />
         </Content>
+        <Footer
+          style={{
+            textAlign: 'center',
+            margin: '30px 0 10px 0',
+            color: 'rgba(0, 0, 0, .45)',
+          }}
+        >
+          copyright © {new Date().getFullYear()} CRPJS 科技有限公司版权所有
+        </Footer>
       </Layout>
     </Layout>
   );
